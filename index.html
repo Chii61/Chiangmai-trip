@@ -3,147 +3,168 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>清邁四天三夜行程 11/23–11/26</title>
+<title>清邁四天三夜 11/23–11/26</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Pacifico&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#eef1f6; --surface:#ffffff; --ink:#1b2238; --muted:#5a6480;
-  --indigo:#243a73; --lantern:#e8a317; --lantern-soft:#fbefcf; --line:#cdd5e3;
-  --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;
-  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg:#121a33; --surface:#1a2447; --ink:#eef1f8; --muted:#a9b3cf;
-    --indigo:#9db4f0; --lantern:#f0b43a; --lantern-soft:#3a3320; --line:#34426e;}
-}
+:root{--bg:#fafafa;--card:#fff;--ink:#262626;--muted:#8e8e8e;--line:#dbdbdb;--soft:#f3effb;--peach:#fff1e6;
+--grad:linear-gradient(45deg,#f9ce34,#ee2a7b 55%,#6228d7);
+--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:5.5rem}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.75 var(--sans)}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--lantern);outline-offset:3px}
-header{max-width:44rem;margin:0 auto;padding:3rem 1.25rem 1.5rem}
-h1{font:900 clamp(2.2rem,8vw,3.4rem)/1.15 var(--serif);color:var(--indigo);margin:0 0 .5rem}
-header p{margin:0;color:var(--muted)}
-nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
-nav ul{list-style:none;margin:0 auto;padding:.75rem 1.25rem;max-width:44rem;display:flex;gap:.6rem}
-nav a{display:block;text-decoration:none;text-align:center;padding:.35rem .9rem .5rem;
-  background:var(--lantern);color:#1b2238;font-weight:700;line-height:1.3;
-  border-radius:45% 45% 40% 40% / 55% 55% 45% 45%}
-nav small{display:block;font-weight:500;font-size:.75rem}
-main{max-width:44rem;margin:0 auto;padding:0 1.25rem 3rem}
-section{padding-top:2.5rem}
-h2{font:900 1.9rem/1.2 var(--serif);color:var(--indigo);margin:0 0 .25rem}
-h2 span{font:500 1rem var(--sans);color:var(--muted);margin-left:.5rem}
-.theme{margin:0 0 1.25rem;color:var(--muted)}
-ol{list-style:none;margin:0;padding:0 0 0 1.25rem;border-left:2px solid var(--line)}
-ol li{position:relative;padding:0 0 1.4rem 1rem}
-ol li::before{content:"";position:absolute;left:-1.7rem;top:.55rem;width:.75rem;height:.75rem;
-  border-radius:50%;background:var(--lantern);border:2px solid var(--bg)}
-.time{display:block;font-weight:700;color:var(--indigo);font-variant-numeric:tabular-nums}
-.place{display:block;font-weight:700;font-size:1.1rem}
-ol li p{margin:.15rem 0 0;color:var(--muted)}
-.note{background:var(--lantern-soft);border-left:4px solid var(--lantern);padding:.75rem 1rem;margin:1rem 0 0;border-radius:0 .5rem .5rem 0}
-.note strong{display:block}
-.todo{background:var(--surface);border:1px solid var(--line);border-radius:.75rem;padding:1.25rem 1.5rem;margin-top:3rem}
-.todo h2{font-size:1.4rem}
-.todo ul{margin:.5rem 0 0;padding-left:1.2rem}
-footer{max-width:44rem;margin:0 auto;padding:0 1.25rem 3rem;color:var(--muted);font-size:.875rem}
-@media (max-width:30rem){nav ul{gap:.4rem}nav a{padding:.3rem .6rem .45rem}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.7 var(--sans)}
+:focus-visible{outline:3px solid #6228d7;outline-offset:2px}
+.wrap{max-width:32rem;margin:0 auto;padding:0 1rem 3rem}
+header{text-align:center;padding:2.2rem 0 1rem}
+header .script{font:400 1.5rem/1.2 Pacifico,cursive;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1{margin:.2rem 0 0;font:700 2rem/1.2 var(--sans);letter-spacing:.04em}
+header p{margin:.3rem 0 0;color:var(--muted);font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-top:1rem;overflow:hidden}
+details>summary{list-style:none;cursor:pointer;padding:1rem 1.1rem;display:flex;justify-content:space-between;align-items:center;font-weight:700}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"＋";color:var(--muted);font-weight:400}
+details[open]>summary::after{content:"－"}
+.count{font-weight:500;color:var(--muted);font-size:.85rem;margin-left:.5rem}
+.bar{height:4px;background:var(--line);margin:0 1.1rem}
+.bar i{display:block;height:100%;width:0;background:var(--grad);transition:width .25s}
+.grp{padding:.8rem 1.1rem 0}
+.grp h3{margin:0 0 .3rem;font-size:.95rem;color:#6228d7}
+.grp label{display:flex;gap:.7rem;align-items:center;padding:.35rem 0;cursor:pointer}
+.grp input{appearance:none;-webkit-appearance:none;flex:none;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);background:#fff;display:grid;place-items:center;margin:0}
+.grp input:checked{background:var(--grad);border-color:transparent}
+.grp input:checked::after{content:"✓";color:#fff;font-size:13px;line-height:1}
+.grp input:checked+span{color:var(--muted);text-decoration:line-through}
+.grp:last-child{padding-bottom:1rem}
+.stories{display:flex;gap:1rem;justify-content:center;padding:1.4rem 0 .4rem}
+.story{border:0;background:none;padding:0;cursor:pointer;text-align:center;font:inherit;color:var(--ink)}
+.ring{display:block;width:68px;height:68px;border-radius:50%;padding:3px;background:var(--line)}
+.story[aria-pressed=true] .ring{background:var(--grad)}
+.ring b{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:#fff;border:3px solid #fff;font-size:1.35rem;font-weight:700;background:var(--soft)}
+.story small{display:block;margin-top:.3rem;font-size:.78rem;color:var(--muted)}
+.story[aria-pressed=true] small{color:var(--ink);font-weight:700}
+.dayhead{padding:1.1rem 1.1rem .2rem}
+.dayhead h2{margin:0;font-size:1.3rem}
+.dayhead p{margin:.1rem 0 0;color:var(--muted);font-size:.9rem}
+.wx{display:flex;gap:.8rem;align-items:center;margin:.8rem 1.1rem 0;padding:.7rem .9rem;background:var(--peach);border-radius:12px;font-size:.9rem}
+.wx .ic{font-size:1.9rem;line-height:1}
+.wx strong{display:block}
+.wx span{color:var(--muted);font-size:.8rem}
+ol{list-style:none;margin:1rem 1.1rem 0;padding:0 0 0 .9rem;border-left:2px solid var(--line)}
+li{position:relative;padding:0 0 1rem .9rem}
+li::before{content:"";position:absolute;left:-1.35rem;top:.5rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--grad);border:2px solid #fff}
+.t{display:block;font-size:.82rem;font-weight:700;color:#6228d7}
+.p{display:block;font-weight:700}
+li p{margin:0;color:var(--muted);font-size:.9rem}
+li a{color:#6228d7}
+.note{margin:0 1.1rem 1.1rem;padding:.7rem .9rem;background:var(--soft);border-radius:12px;font-size:.9rem}
+footer{text-align:center;color:var(--muted);font-size:.8rem;margin-top:1.5rem}
 </style>
 </head>
 <body>
+<div class="wrap">
 <header>
+  <div class="script">Chiang Mai</div>
   <h1>清邁四天三夜</h1>
-  <p>11/23（一）到 11/26（四），含天燈節與水燈遊行。時間為建議安排，實際以各活動公告為準。</p>
+  <p>11/23 至 11/26，天燈節同行</p>
 </header>
 
-<nav aria-label="行程日期">
-  <ul>
-    <li><a href="#d1">11/23<small>週一</small></a></li>
-    <li><a href="#d2">11/24<small>週二</small></a></li>
-    <li><a href="#d3">11/25<small>週三</small></a></li>
-    <li><a href="#d4">11/26<small>週四</small></a></li>
-  </ul>
-</nav>
+<details class="card" open>
+  <summary><span>行前必帶清單<span class="count" id="cnt"></span></span></summary>
+  <div class="bar"><i id="prog"></i></div>
+  <div id="pack"></div>
+</details>
 
-<main>
-<section id="d1">
-  <h2>11/23<span>瀑布與包車</span></h2>
-  <p class="theme">抵達清邁，包車前往瀑布與咖啡廳。</p>
-  <ol>
-    <li><span class="time">07:20–10:35</span><span class="place">桃園 → 清邁（BR257）</span><p>入境、領行李後，與包車司機會合。</p></li>
-    <li><span class="time">約 12:00</span><span class="place">天使瀑布咖啡廳</span><p>午餐與咖啡，欣賞瀑布景觀。</p></li>
-    <li><span class="time">下午</span><span class="place">黏黏瀑布</span><p>可赤腳攀爬的石灰岩瀑布，請穿防滑鞋。</p></li>
-    <li><span class="time">傍晚</span><span class="place">水中雨樹</span><p>趁天黑前拍照，再回市區。</p></li>
-    <li><span class="time">晚上</span><span class="place">晚餐與休息</span><p>早起加上一天車程，早點休息。</p></li>
-  </ol>
-</section>
-
-<section id="d2">
-  <h2>11/24<span>藤編街與天燈節</span></h2>
-  <p class="theme">上午逛街，13:00 搭接駁車去天燈節，晚餐在場地內。</p>
-  <ol>
-    <li><span class="time">09:00</span><span class="place">塔佩門</span><p>古城東門，慶典期間人還不多，適合拍照。</p></li>
-    <li><span class="time">09:30–11:00</span><span class="place">藤編街（Chang Moi Road）</span><p>從塔佩門往瓦洛洛市場方向逛，街上有 Wyenumpueng Changmoi Furniture，旁邊有 Brewginning Coffee 可休息。</p></li>
-    <li><span class="time">11:00–11:45</span><span class="place">午餐</span><p>在瓦洛洛市場附近或藤編街咖啡廳用餐，不要拖過 11:45。</p></li>
-    <li><span class="time">11:45–12:15</span><span class="place">回飯店準備</span><p>放下戰利品、換輕便衣物，帶上外套、行動電源與防蚊液。</p></li>
-    <li><span class="time">12:15</span><span class="place">前往清邁國際會展中心</span><p>叫車或請包車前往，會展中心在清邁 700 週年體育場附近，請先看地圖估車程，並預留塞車時間。<a href="https://maps.app.goo.gl/GKFutrom2232j2Zq8" target="_blank" rel="noopener">開啟地圖</a></p></li>
-    <li><span class="time">12:45</span><span class="place">抵達接駁點</span><p>先找到接駁車上車位置，並備好票券。</p></li>
-    <li><span class="time">13:00–14:30</span><span class="place">接駁車上車時段</span><p>黃金、高級、貴賓、標準票都在清邁國際會展中心上車。我們計畫 13:00 上車，抵達活動場地後在主入口報到。</p></li>
-    <li><span class="time">14:30–17:00</span><span class="place">場地報到</span><p>在主入口登記，領取掛繩通行證和紀念品。</p></li>
-    <li><span class="time">約 15:00–18:30</span><span class="place">參觀與參與場地活動</span><p>自由逛場地、體驗各項活動，並預留時間拍照。</p></li>
-    <li><span class="time">18:30–19:30</span><span class="place">蘭納風味晚餐</span><p>在對應票種的用餐區享用晚餐、小吃、甜點和飲料，不需要另外安排晚餐。</p></li>
-    <li><span class="time">19:30</span><span class="place">進入佛塔附近的儀式區</span><p>提早入座，找好能看見天空的位置。</p></li>
-    <li><span class="time">19:40</span><span class="place">文化表演與儀式</span></li>
-    <li><span class="time">20:15</span><span class="place">同時釋放天燈</span><p>全場同步施放，記得把手機先調好錄影。</p></li>
-    <li><span class="time">20:45</span><span class="place">儀式結束，搭車返回</span><p>散場時人多車多，依票券的返程安排或請司機接送，預計回到飯店約 22:00 以後。</p></li>
-  </ol>
-  <div class="note"><strong>隔天 08:30 要上課</strong>回到飯店後盡快休息，11/25 的衣物和包包先在出門前準備好。山區晚上偏涼，記得帶薄外套、防蚊液。</div>
-</section>
-
-<section id="d3">
-  <h2>11/25<span>手作、泰拳、水燈遊行與夜市</span></h2>
-  <p class="theme">上午料理手作，下午上泰拳課，晚上看遊行逛夜市。</p>
-  <ol>
-    <li><span class="time">08:30</span><span class="place">奶奶廚房手作活動</span><p>通常含市場採買與料理課，結束時間請向主辦方確認。</p></li>
-    <li><span class="time">結束後到 14:30</span><span class="place">午餐與自由時間</span><p>先午餐，在古城內休息。泰拳館附近有咖啡廳和按摩店。</p></li>
-    <li><span class="time">14:30</span><span class="place">泰拳館報到</span><p>Dang Muay Thai Gym（43, 1 Thanon Arak，古城內），換運動服、準備護具。</p></li>
-    <li><span class="time">15:00–16:00</span><span class="place">泰拳私人教練課</span><p>一小時私教課，赤腳上課，手套與手綁帶請預約時確認是否租借。</p></li>
-    <li><span class="time">16:00–16:30</span><span class="place">換衣服、補水</span><p>在道館或附近換上乾淨衣服，擦汗並補充水分。</p></li>
-    <li><span class="time">16:30</span><span class="place">前往塔佩門</span><p>叫車前往，遊行當天可能封路，在離塔佩門約 500 公尺處下車再走過去。</p></li>
-    <li><span class="time">17:15</span><span class="place">塔佩門一帶</span><p>先找好看遊行的位置，並約好集合點，人多時手機訊號會變差。</p></li>
-    <li><span class="time">約 18:00–19:30</span><span class="place">水燈遊行（Grand Krathong）</span><p>預計由塔佩門出發穿過古城，今年的時間與路線請以市政府公告為準。</p></li>
-    <li><span class="time">19:30–20:00</span><span class="place">晚餐</span><p>在塔佩門附近簡單吃。</p></li>
-    <li><span class="time">20:00–21:30</span><span class="place">夜市（Night Bazaar／Kalare）</span><p>搭雙條車或嘟嘟車前往，逛街與買伴手禮。</p></li>
-  </ol>
-  <div class="note"><strong>隨身帶</strong>乾淨的換洗衣物、毛巾、水、行動電源、薄外套，以及上課前後都好走的鞋。隔天 11:25 起飛，晚上不要玩得太晚。</div>
-</section>
-
-<section id="d4">
-  <h2>11/26<span>返程</span></h2>
-  <p class="theme">早點出發，不要趕。</p>
-  <ol>
-    <li><span class="time">約 08:00</span><span class="place">早餐、退房</span><p>可順路買伴手禮。</p></li>
-    <li><span class="time">約 09:00</span><span class="place">前往清邁機場</span><p>國際線建議至少提前 2 小時到。</p></li>
-    <li><span class="time">11:25–15:55</span><span class="place">清邁 → 桃園（CI852）</span><p>平安回家。</p></li>
-  </ol>
-</section>
-
-<div class="todo">
-  <h2>出發前還要確認</h2>
-  <ul>
-    <li>黏黏瀑布與水中雨樹的開放時間和順序</li>
-    <li>天燈節在會展中心的上車細節（車牌或集合方式），以及返程接駁的發車時間與下車地點</li>
-    <li>11/25 水燈遊行的官方時間與路線</li>
-    <li>奶奶廚房的結束時間</li>
-    <li>泰拳私教 11/25 15:00 的預約結果，以及護具租借與換衣空間</li>
-  </ul>
+<nav class="stories" id="stories" aria-label="選擇日期"></nav>
+<main class="card" id="day" aria-live="polite"></main>
+<footer>行程時間為建議安排，活動時間以主辦單位公告為準。</footer>
 </div>
-</main>
 
-<footer>行程資訊整理自公開網路資料，節慶時間可能調整，出發前請再查官方公告。</footer>
+<script>
+const PACK=[
+["證件與付款",["護照（效期建議 6 個月以上）","機票與電子登機證（BR257、CI852）","天燈節票券（截圖或列印）","泰銖現金與信用卡","住宿與包車確認資料","入境規定與表格（行前查最新公告）"]],
+["衣物與鞋",["輕薄透氣的衣服","薄外套（晚上偏涼）","防滑涼鞋或水鞋（黏黏瀑布）","好走的鞋（走路與遊行）","泰拳課運動服","乾淨換洗衣物（11/25 不回飯店）","帽子與太陽眼鏡"]],
+["電子用品",["手機網路（eSIM 或漫遊）","行動電源","充電線與充電器","相機或運動相機","防水手機袋"]],
+["盥洗與保養",["防曬乳","防蚊液","個人常備藥品","濕紙巾與衛生紙","乾洗手"]],
+["活動專用",["毛巾（泰拳課）","手綁帶（可自備）","輕便小背包","摺疊購物袋（藤編街與市集）"]],
+["出發前確認",["泰拳私教預約（11/25 15:00）","奶奶廚房的結束時間","水燈遊行的官方時間與路線","天燈節返程接駁的發車時間","瀑布與水中雨樹的開放時間"]]
+];
+const MAP="https://maps.app.goo.gl/GKFutrom2232j2Zq8";
+const DAYS=[
+{d:"2026-11-23",n:"23",w:"週一",title:"11/23 抵達與瀑布",theme:"落地後包車去瀑布與咖啡廳。",items:[
+["07:20–10:35","桃園 → 清邁（BR257）","入境、領行李後與包車司機會合。"],
+["約 12:00","天使瀑布咖啡廳","午餐與咖啡，欣賞瀑布景觀。"],
+["下午","黏黏瀑布","可赤腳攀爬的石灰岩瀑布，請穿防滑鞋。"],
+["傍晚","水中雨樹","趁天黑前拍照。"],
+["晚上","晚餐與休息","早起加上一天車程，早點休息。"]]},
+{d:"2026-11-24",n:"24",w:"週二",title:"11/24 藤編街與天燈節",theme:"上午逛街，13:00 搭接駁車去天燈節。",items:[
+["09:00","塔佩門","古城東門，人還不多，適合拍照。"],
+["09:30–11:00","藤編街（Chang Moi Road）","從塔佩門逛向瓦洛洛市場，旁邊有 Brewginning Coffee 可休息。"],
+["11:00–11:45","午餐","在瓦洛洛市場附近或藤編街咖啡廳。"],
+["11:45–12:15","回飯店準備","放下戰利品，帶外套、行動電源與防蚊液。"],
+["12:15","前往清邁國際會展中心","叫車前往，預留塞車時間。<a href='"+MAP+"' target='_blank' rel='noopener'>開啟地圖</a>"],
+["12:45","抵達接駁點","找到上車位置並備好票券。"],
+["13:00–14:30","接駁車上車時段","各票種都在此上車，我們計畫 13:00 上車。"],
+["14:30–17:00","場地報到","主入口登記，領取掛繩通行證與紀念品。"],
+["約 15:00–18:30","場地活動","自由參觀與體驗各項活動。"],
+["18:30–19:30","蘭納風味晚餐","在對應票種的用餐區享用。"],
+["19:30","進入儀式區","佛塔附近，提早找好位置。"],
+["19:40","文化表演與儀式",""],
+["20:15","同時釋放天燈","全場同步，先調好手機錄影。"],
+["20:45","儀式結束","搭車返回，散場人多，依票券的返程安排。"]],
+note:"隔天 08:30 要上課，回去後盡快休息。山區晚上偏涼，記得帶薄外套與防蚊液。"},
+{d:"2026-11-25",n:"25",w:"週三",title:"11/25 手作、泰拳與水燈遊行",theme:"上午料理手作，下午上泰拳課，晚上看遊行逛夜市。",items:[
+["08:30","奶奶廚房手作活動","通常含市場採買與料理課，結束時間請向主辦方確認。"],
+["結束後到 14:30","午餐與自由時間","先午餐，在古城內休息。"],
+["14:30","泰拳館報到","Dang Muay Thai Gym（43, 1 Thanon Arak，古城內），換運動服。"],
+["15:00–16:00","泰拳私人教練課","一小時私教課，赤腳上課，手套與手綁帶請預約時確認。"],
+["16:00–16:30","換衣服、補水","在道館或附近換上乾淨衣服。"],
+["16:30","前往塔佩門","叫車前往，遊行當天可能封路，在離塔佩門約 500 公尺處下車步行。"],
+["17:15","塔佩門一帶","找好看遊行的位置並約好集合點，人多時手機訊號會變差。"],
+["約 18:00–19:30","水燈遊行（Grand Krathong）","預計由塔佩門出發穿過古城，時間與路線以市政府公告為準。"],
+["19:30–20:00","晚餐","在塔佩門附近簡單吃。"],
+["20:00–21:30","夜市（Night Bazaar／Kalare）","搭雙條車或嘟嘟車前往，逛街與買伴手禮。"]],
+note:"整天不回飯店，隨身帶換洗衣物、毛巾、水、行動電源與薄外套。隔天 11:25 起飛，晚上不要玩太晚。"},
+{d:"2026-11-26",n:"26",w:"週四",title:"11/26 返程",theme:"早點出發，不要趕。",items:[
+["約 08:00","早餐、退房","可順路買伴手禮。"],
+["約 09:00","前往清邁機場","國際線建議至少提前 2 小時到。"],
+["11:25–15:55","清邁 → 桃園（CI852）","平安回家。"]]}
+];
+
+/* 行前清單 */
+const KEY="cm-pack-v1";let saved={};
+try{saved=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+const packEl=document.getElementById("pack");let total=0;
+PACK.forEach((g,gi)=>{const s=document.createElement("section");s.className="grp";
+ s.innerHTML="<h3>"+g[0]+"</h3>"+g[1].map((t,i)=>{total++;const id=gi+"-"+i;
+ return "<label><input type='checkbox' data-id='"+id+"'"+(saved[id]?" checked":"")+"><span>"+t+"</span></label>"}).join("");
+ packEl.appendChild(s)});
+function upd(){const c=packEl.querySelectorAll("input:checked").length;
+ document.getElementById("cnt").textContent=c+" / "+total;
+ document.getElementById("prog").style.width=(c/total*100)+"%"}
+packEl.addEventListener("change",e=>{if(e.target.dataset.id){saved[e.target.dataset.id]=e.target.checked;
+ try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(err){}upd()}});
+upd();
+
+/* 天氣 */
+const WX={};
+const ICON=c=>c===0?"☀️":c<=2?"🌤️":c===3?"☁️":c<=48?"🌫️":c<=67?"🌧️":c<=82?"🌦️":"⛈️";
+fetch("https://api.open-meteo.com/v1/forecast?latitude=18.79&longitude=98.98&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FBangkok&start_date=2026-11-23&end_date=2026-11-26")
+ .then(r=>r.ok?r.json():Promise.reject()).then(j=>{j.daily.time.forEach((d,i)=>{WX[d]={c:j.daily.weather_code[i],hi:Math.round(j.daily.temperature_2m_max[i]),lo:Math.round(j.daily.temperature_2m_min[i]),p:j.daily.precipitation_probability_max[i]}});show(cur)})
+ .catch(()=>{});
+
+/* 日期與行程 */
+const st=document.getElementById("stories"),dayEl=document.getElementById("day");let cur=0;
+DAYS.forEach((x,i)=>{const b=document.createElement("button");b.className="story";b.type="button";
+ b.innerHTML="<span class='ring'><b>"+x.n+"</b></span><small>"+x.w+"</small>";
+ b.setAttribute("aria-label","11 月 "+x.n+" 日 "+x.w);b.onclick=()=>show(i);st.appendChild(b)});
+function show(i){cur=i;const x=DAYS[i],w=WX[x.d];
+ [...st.children].forEach((b,k)=>b.setAttribute("aria-pressed",k===i));
+ const wx=w?"<div class='wx'><div class='ic'>"+ICON(w.c)+"</div><div><strong>"+w.lo+"°C 至 "+w.hi+"°C，降雨機率 "+w.p+"%</strong><span>即時天氣預報，出發前請再看一次。</span></div></div>"
+ :"<div class='wx'><div class='ic'>🌡️</div><div><strong>天氣預報暫時取不到</strong><span>11 月清邁通常白天偏熱、晚上偏涼，日夜溫差大，請帶薄外套。</span></div></div>";
+ dayEl.innerHTML="<div class='dayhead'><h2>"+x.title+"</h2><p>"+x.theme+"</p></div>"+wx+
+ "<ol>"+x.items.map(t=>"<li><span class='t'>"+t[0]+"</span><span class='p'>"+t[1]+"</span>"+(t[2]?"<p>"+t[2]+"</p>":"")+"</li>").join("")+"</ol>"+
+ (x.note?"<div class='note'>"+x.note+"</div>":"")}
+show(0);
+</script>
 </body>
 </html>
